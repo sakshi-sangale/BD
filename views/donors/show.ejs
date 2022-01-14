@@ -1,0 +1,59 @@
+<% layout('layouts/boilerplate') %>
+
+    <div class="container">
+
+        <div class="card w-50  mx-auto mt-5 border-rounded shadow-lg">
+            <div class="card-header text-center">
+                <h1>Donor Details</h1>
+            </div>
+            <div class="card-body m-5">
+
+                <h6> <strong> Name Of Donor:</strong>
+                    <%= donor.firstName %>
+                        <%= donor.lastName %>
+                </h6>
+                <h6> <strong>Date Of Birth: </strong>
+                    <%= donor.dob %>
+                </h6>
+                <h6> <strong>Age :</strong>
+                    <%= donor.age %>
+                </h6>
+                <h6> <strong>Blood Group :</strong>
+                    <%= donor.bloodGroup %>
+                </h6>
+                <h6> <strong>Weight : </strong>
+                    <%= donor.weight %>
+                </h6>
+                <!-- <h6> <strong>Gender : </strong> <%= donor.gender%>  </h6> -->
+                <h6> <strong>E-mail : </strong>
+                    <%= donor.eMail %>
+                </h6>
+                <h6> <strong>Phone No. : </strong>
+                    <%= donor.phoneNo %>
+                </h6>
+                <h6> <strong>Address : </strong>
+                    <%= donor.address %>
+                </h6>
+
+                <p>
+                <div class="row">
+                    <div class="col-4 mt-5">
+                        <button class="btn btn-outline-info"><a href="/donors/<%=donor._id%>/edit">Update
+                                Details</a></button>
+
+                    </div>
+                    <div class="col-8 mt-5">
+                        <form action="/donors/<%=donor._id%>?_method=DELETE" method="POST">
+                            <button class="btn btn-outline-danger">Delete</button>
+                        </form>
+
+
+                    </div>
+                </div>
+
+                </p>
+
+            </div>
+        </div>
+
+    </div>

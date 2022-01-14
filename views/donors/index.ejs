@@ -1,0 +1,49 @@
+<% layout('layouts/boilerplate') %>
+
+  <div class="container">
+    <h2 class="card-header text-center">List of Donor</h2>
+
+    <div class="card w-100 p-3 mx-auto mt-5 border-rounded shadow-sm mb-3">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Age</th>
+            <th scope="col">Blood Group</th>
+            <th scope="col">Address</th>
+            <th scope="col">Phone No.</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <% for(let donor of donors){ %>
+            <tr>
+
+              <td>
+                <%= donor.firstName %>
+                  <%= donor.lastName %>
+              </td>
+              <td>
+                <%= donor.age %>
+              </td>
+              <td>
+                <%= donor.bloodGroup %>
+              </td>
+              <td>
+                <%= donor.address %>
+              </td>
+              <td>
+                <%= donor.phoneNo %>
+              </td>
+              <td><a href="/tours/<%= donor._id%>">show more</a></td>
+
+            </tr>
+            <% } %>
+
+
+        </tbody>
+      </table>
+
+    </div>
+  </div>

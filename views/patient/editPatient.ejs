@@ -1,0 +1,43 @@
+<% layout('layouts/boilerplate') %>
+  <div class="container">
+
+    <div class="container-sm w-50 mx-auto border-rounded shadow-lg  mt-5">
+
+      <h2 class="text-center pt-4 mt-3 text-dark">Update Contact Info</h2>
+      <div class="container-sm ">
+        <form action="/patient/<%=patient._id%>?_method=PUT" method="POST" class="form  px-5 mx-5">
+
+          <div class="row p-2">
+            <div class="col">
+              <label for="firstName"> <strong> Name</strong></label>
+              <input type="text" class="form-control" id="firstName" placeholder="First name" name="patient[firstName]"
+                value="<%=patient.firstName%>">
+            </div>
+            <div class="col">
+              <label for="lastName"></label>
+              <input type="text" class="form-control" id="lastName" placeholder="Last name" name="patient[lastName]"
+                value="<%=patient.lastName%>">
+            </div>
+          </div>
+
+          <div class="col p-2">
+            <label for="address"> <strong>Address</strong> </label>
+            <input type="text" class="form-control" id="address" name="donor[address]" value="<%=patient.address%>">
+          </div>
+          <div class="col p-2">
+            <label for="eMail"> <strong>E-mail</strong></label>
+            <input type="text" class="form-control" id="eMail" name="donor[eMail]">
+          </div>
+
+          <div class="col p-2">
+            <label for="phoneNo"> <strong>Phone No.</strong> </label>
+            <input type="number" class="form-control" id="phoneNo" name="donor[phoneNo]" value="<%= patient.phoneNo%>">
+          </div>
+
+          <button class="btn btn-success my-3 ">Update</button>
+        </form>
+
+      </div>
+
+    </div>
+  </div>

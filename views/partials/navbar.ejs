@@ -1,0 +1,98 @@
+<div class="p-2 " style="background-color: rgb(194, 38, 38); height: 50px;">
+  <div class="container">
+    <div class="row">
+      <div class="col-6 text-start text-white">
+        <a href="" class="text-white" onMouseOver="this.style.color='grey'"
+          onMouseOut="this.style.color='white'">blood.donation123@gmail.com</a>
+      </div>
+      <div class="col-3">
+        <h1></h1>
+      </div>
+      <div class="col-3 text-end">
+        <a class="navbar-brand" href="#">
+          <img src="/public/images/u1.png" alt="" width="60" height="40" class="d-inline-block align-text-top ">
+        </a>
+        <a class="navbar-brand" href="#">
+          <img src="/public/images/facebok1.png" alt="" width="30" height="20"
+            class="d-inline-block align-text-top rounded-circle mt-2">
+        </a>
+        <a class="navbar-brand" href="#">
+          <img src="/public/images/tw6.png" alt="" width="30" height="20"
+            class="d-inline-block align-text-top rounded-circle mt-2">
+        </a>
+        <a class="navbar-brand" href="#">
+          <img src="/public/images/u.png" alt="" width="30" height="20"
+            class="d-inline-block align-text-top rounded-circle mt-2">
+        </a>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+<div class="container">
+  <nav class="navbar sticky-top navbar-expand-lg navbar-light text-danger" style="color: brown;">
+    <div class="container-fluid">
+
+
+      <a class="navbar-brand" href="/">
+        <img src="/public/images/2.gif" alt="" width="40" height="34"
+          class="d-inline-block align-text-top rounded-circle">
+        <strong>Blood Donation</strong>
+      </a>
+
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link active" aria-current="page" href="/" onMouseOver="this.style.color='grey'"
+            onMouseOut="this.style.color='black'"><strong> Home</strong></a>
+          <a class="nav-link active" aria-current="page" href="/donors" onMouseOver="this.style.color='grey'"
+            onMouseOut="this.style.color='black'"><strong> List of Donor</strong></a>
+          <a class="nav-link active" aria-current="page" href="/patient" onMouseOver="this.style.color='grey'"
+            onMouseOut="this.style.color='black'"> <strong> List of Patient</strong></a>
+
+          <a class="nav-link active" href="/about" onMouseOver="this.style.color='grey'"
+            onMouseOut="this.style.color='black'"> <strong>About</strong> </a>
+
+        </div>
+
+      </div>
+      <ul class="nav justify-content-end">
+        <% if(!currentUser) {%>
+          <li class="nav-item">
+            <a class="nav-link active" style="color: black" onMouseOver="this.style.color='grey'"
+              onMouseOut="this.style.color='black'" class="text-decoration-none" href="/login"> <strong>
+                Login</strong></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" style="color: black" onMouseOver="this.style.color='grey'"
+              onMouseOut="this.style.color='black'" class="text-decoration-none" href="/register"> <strong>
+                SignUp</strong></a>
+          </li>
+          <% } else {%>
+            <li class="nav-item">
+              <a class="nav-link" style="color: black" onMouseOver="this.style.color='grey'"
+                onMouseOut="this.style.color='black'" class="text-decoration-none" href="/logout">
+                <strong>logout</strong> </a>
+            </li>
+            <% } %>
+      </ul>
+
+
+
+    </div>
+
+
+
+
+  </nav>
+
+</div>
+<div class="" style="background-color: brown; height: 1px;">
+  <h1></h1>
+</div>

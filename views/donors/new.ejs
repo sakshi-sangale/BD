@@ -1,0 +1,94 @@
+<% layout('layouts/boilerplate') %>
+
+  <div class="container">
+
+
+    <div class="container-sm mx-5 px-5 mb-3 ">
+      <div class="container-sm  px-5 border-rounded shadow-lg">
+        <h2 class=" text-center pt-4 mt-3 text-dark">Add Donors Details</h2>
+
+
+
+
+
+        <form action="/donors" method="POST" class="form  px-5 mx-5">
+          <div class="row p-2">
+            <div class="col-6">
+              <label for="firstName"> <strong> Name of Donor</strong></label>
+              <input type="text" class="form-control" id="firstName" placeholder="First name" name="donor[firstName]">
+            </div>
+            <div class="col-6">
+              <label for="lastName"></label>
+              <input type="text" class="form-control" id="lastName" placeholder="Last name" name="donor[lastName]">
+            </div>
+          </div>
+
+          <div class="row p-2">
+            <div class="col p-2">
+              <label for="dob"> <strong>Date Of Birth</strong> </label>
+
+              <input type="date" class="form-control" id="dob" name="donor[dob]">
+            </div>
+            <div class="col p-2">
+              <label for="age"> <strong>Age</strong> </label>
+              <input type="number" class="form-control" id="age" name="donor[age]">
+            </div>
+          </div>
+
+          <div class="row p-2">
+            <div class="col p-2">
+              <label for="bloodGroup"> <strong>Blood Group</strong> </label>
+              <input type="text " class="form-control" id="bloodGroup" name="donor[bloodGroup]">
+            </div>
+            <div class="col p-2">
+              <label for="weight"> <strong>Weight</strong> </label>
+              <input type="number" class="form-control" id="weight" name="donor[weight]">
+            </div>
+          </div>
+
+          <div class="column p-2 ">
+            <label for="gender m-2"> <strong>Gender</strong></label>
+            <div class="form-check form-check-inline  " id="gender">
+              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+              <label class="form-check-label" for="inlineRadio1"> Male</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+              <label class="form-check-label" for="inlineRadio2">Female</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+              <label class="form-check-label" for="inlineRadio3">Other</label>
+            </div>
+          </div>
+
+          <div class="row p-2">
+            <div class="col p-2">
+              <label for="eMail"> <strong>E-mail</strong></label>
+              <input type="text" class="form-control" id="eMail" name="donor[eMail]">
+            </div>
+            <div class="col p-2">
+              <label for="phoneNo"> <strong>Phone No.</strong></label>
+              <input type="text" class="form-control" id="phoneNo" name="donor[phoneNo]">
+            </div>
+          </div>
+
+          <div class="col p-2">
+            <label for="address"> <strong>Address</strong></label>
+            <input type="textarea" class="form-control" id="address" name="donor[address]">
+            <div id="validationServer03Feedback" class="invalid-feedback">
+              Please provide a valid ADDRESS.
+            </div>
+
+          </div>
+          <button class="btn btn-success my-2 ">Submit</button>
+
+        </form>
+
+
+      </div>
+
+    </div>
+
+
+  </div>

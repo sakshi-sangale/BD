@@ -1,0 +1,64 @@
+<% layout('layouts/boilerplate') %>
+
+  <div class="container">
+
+    <h2 class="card-header text-center">List of Patients</h2>
+
+
+
+
+    <div class="card w-100 p-3  mx-auto mt-5 border-rounded shadow-sm mb-3">
+
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col"> Patient Name</th>
+            <th scope="col">Age</th>
+            <th scope="col">Reason</th>
+            <th scope="col">Blood Group</th>
+            <th scope="col">Unit</th>
+            <th scope="col">Hospital</th>
+            <th scope="col">Action</th>
+
+
+
+
+          </tr>
+        </thead>
+        <tbody>
+
+          <% for(let donor of patient){ %>
+            <tr>
+
+              <td>
+                <%= donor.firstName %>
+                  <%= donor.lastName %>
+              </td>
+              <td>
+                <%= donor.age %>
+              </td>
+              <td>
+                <%= donor.reason %>
+              </td>
+              <td>
+                <%= donor.bloodGroup %>
+              </td>
+              <td>
+                <%= donor.unit %>
+              </td>
+              <td>
+                <%= donor.hospital %>
+              </td>
+              <td><a href="/patient/<%= donor._id%>" style="color: rgb(0, 0, 0)" onMouseOver="this.style.color='grey'"
+                  onMouseOut="this.style.color='black'" class="text-decoration-none" href="/logout">show more</a></td>
+
+            </tr>
+            <% } %>
+
+
+        </tbody>
+      </table>
+
+    </div>
+
+  </div>
